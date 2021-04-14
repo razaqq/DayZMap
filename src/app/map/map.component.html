@@ -1,0 +1,13 @@
+<div class="map-container" leaflet
+     [leafletOptions]="options"
+     [leafletLayers]="layers"
+     [leafletLayersControl]="layersControl"
+     [leafletLayersControlOptions]="layersControlOptions"
+     (leafletMapReady)="onMapReady($event)"
+     (leafletMapZoomEnd)="onMapZoomEnd($event)"
+     (leafletMouseMove)="onMouseMove($event)"
+     (leafletMouseDown)="onMouseDown($event)"
+     (contextmenu)="onRightClick($event)">
+</div>
+
+<div class="coords hidden-sm hidden-xs">{{ coords }}</div>

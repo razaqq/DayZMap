@@ -1,0 +1,11 @@
+{
+  "satURL": "https://www.example.com/dayz/static/sat/{z}/{z}_{x}_{y}.jpg",
+  "topoURL": "https://www.example.com/dayz/static/topo/{z}/{z}_{x}_{y}.png",
+  "mapSize": 15360,
+  "tileSize": 256,
+  "bounds": [[-256, 0], [0, 256]],
+  "center": [-128, 128],
+  "minZoom": 0,
+  "maxZoom": 7,
+  "initZoom": 2
+}

@@ -1,0 +1,24 @@
+.example-section
+{
+  margin: 12px 0;
+}
+
+.example-margin
+{
+  margin: 0 12px;
+}
+
+.filterIcon
+{
+  height: 25px;
+  width: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border-color: rgba(38, 38, 38, 1);
+}
+
+ul
+{
+  list-style-type: none;
+  margin-top: 4px;
+}

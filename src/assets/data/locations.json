@@ -1,0 +1,350 @@
+[
+  {
+    "name": "Novy Sobor",
+    "locations": [[7123.63, 7774.63]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Guglovo",
+    "locations": [[8431.08, 6703.19]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Stary Sobor",
+    "locations": [[6169.01, 7793.67]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Vyshnoye",
+    "locations": [[6561.9, 6078.77]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Gorka",
+    "locations": [[9616.06, 8914.38]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Shakhovka",
+    "locations": [[9728.64, 6567.3]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Kabanino",
+    "locations": [[5300.71, 8645.9]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Mogilevka",
+    "locations": [[7650.41, 5096.46]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Rogovo",
+    "locations": [[4770.96, 6835.26]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Polana",
+    "locations": [[10707.06, 8053.29]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Grishino",
+    "locations": [[5959.94, 10335.67]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Pulkovo",
+    "locations": [[4950.82, 5627.1]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Staroye",
+    "locations": [[10212.52, 5385.04]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Pogorevka",
+    "locations": [[4435.36, 6425.58]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Nadezhdino",
+    "locations": [[5876.66, 4696.93]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Dubrovka",
+    "locations": [[10382.13, 9938.35]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Dolina",
+    "locations": [[11285.17, 6633.58]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Pusta",
+    "locations": [[9127.18, 3954.47]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Vybor",
+    "locations": [[3833.17, 8918.92]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Prigorodki",
+    "locations": [[8015.58, 3419.26]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Msta",
+    "locations": [[11333.79, 5421.3999]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Gvozdno",
+    "locations": [[8614.620, 11890.320]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Kozlovka",
+    "locations": [[4477.56982, 4597.79004]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Orlovets",
+    "locations": [[12131, 7189.79]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Berezino",
+    "locations": [[12014.0098, 9090.8398]],
+    "fontSize": 12,
+    "category": "Cities"
+  },
+  {
+    "name": "Pustoshka",
+    "locations": [[3070.23, 7940.48]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Drozhino",
+    "locations": [[3382.02002, 4925.88]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Nizhnoye",
+    "locations": [[12824.88, 8097.7002]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Chernogorsk",
+    "locations": [[6731.21, 2554.13]],
+    "fontSize": 12,
+    "category": "Cities"
+  },
+  {
+    "name": "Sosnovka",
+    "locations": [[2539.26, 6358.71]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Zelenogorsk",
+    "locations": [[2774.26, 5380.38]],
+    "fontSize": 12,
+    "category": "Cities"
+  },
+  {
+    "name": "Lopatino",
+    "locations": [[2750, 10004.98]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Petrovka",
+    "locations": [[5016.4502, 12490.75]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Khelm",
+    "locations": [[12329.27, 10771.001]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Myshkino",
+    "locations": [[1998.18, 7355.13]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Bor",
+    "locations": [[3326.74, 3886.73]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Krasnostav",
+    "locations": [[11224.26, 12274.52]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Solnichniy",
+    "locations": [[13397.41, 6336.84]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Kamyshovo",
+    "locations": [[12063.1, 3515.58]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Balota",
+    "locations": [[4527.58, 2465.32]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Tulga",
+    "locations": [[12802.4599, 4369.4902]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Elektrozavodsk",
+    "locations": [[10313.71972, 2159.40991]],
+    "fontSize": 12,
+    "category": "Cities"
+  },
+  {
+    "name": "Komarovo",
+    "locations": [[3664.31006, 2499]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Pavlovo",
+    "locations": [[1693.9799, 3858.6499]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Olsha",
+    "locations": [[13331.0498, 12900.0498]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Kamenka",
+    "locations": [[1853.08996, 2249.8500]],
+    "fontSize": 10,
+    "category": "Towns"
+  },
+  {
+    "name": "Devils Castle",
+    "locations": [[6895.5, 11416.5]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Rog",
+    "locations": [[11241, 4261.5]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Zub",
+    "locations": [[6541, 5583.5]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Black Mountain",
+    "locations": [[10242.5, 12051.5]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Altar",
+    "locations": [[8121, 9283]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Klen",
+    "locations": [[11515.5, 11372]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Three Valleys",
+    "locations": [[12894, 5462]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Skalisty Island",
+    "locations": [[13558, 2940]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Otmel",
+    "locations": [[11603.5, 3217]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Drakon",
+    "locations": [[11159.5, 2491]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Green Mountain",
+    "locations": [[3735, 6010.5]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Skalka",
+    "locations": [[2172, 12857]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  }
+]

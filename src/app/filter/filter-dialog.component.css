@@ -1,0 +1,15 @@
+.buttons
+{
+  margin: auto;
+  float: right;
+}
+
+.filterRow
+{
+  width: 33.3%;
+}
+
+.filters
+{
+  display: flex;
+}

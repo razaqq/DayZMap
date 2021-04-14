@@ -18,13 +18,19 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
-              "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "leaflet/"
+              },
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/leaflet/dist/leaflet.css",
+              "src/styles.css",
+              "src/theme.scss"
             ],
             "scripts": []
           },
@@ -83,7 +89,6 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
