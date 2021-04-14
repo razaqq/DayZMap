@@ -2,6 +2,9 @@
 A browser map for vanilla DayZ Mod (ArmA II) with vehicle spawns etc.
 Working example [here](https://www.perry-swift.de/dayz).
 
+![](https://i.imgur.com/Y9A1zJj.jpg)
+![](https://i.imgur.com/ypr2v1L.png)
+
 # Building
 
 ### Requirements
@@ -12,8 +15,8 @@ Working example [here](https://www.perry-swift.de/dayz).
 * [GDAL](https://gdal.org/index.html) (On Windows via [Anaconda](https://anaconda.org/))
 
 ### Steps
-1.
-```
+1. Run
+```console
 ng build --aot --prod --base-href=/dayz/ --deploy-url=http://www.example.com/
 ```
 2. Copy to webserver
