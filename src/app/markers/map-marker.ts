@@ -90,10 +90,8 @@ export function initLootMarker(mapMarker: MapMarker, mapSize: number, maxBounds:
         rotate: 0,
         offset: { x: 0, y: 0 }
       },
-      zIndexOffset: -1000,
-      className: 'lootMarker'
+      zIndexOffset: -1000
     });
-    m.bindTooltip('LOOT');
     mapMarker.markers.push(m);
   }
 }
