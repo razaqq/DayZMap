@@ -2,8 +2,8 @@
 A browser map for vanilla DayZ Mod (ArmA II) with vehicle spawns etc.
 Working example [here](https://www.perry-swift.de/dayz).
 
-![](https://i.imgur.com/Y9A1zJj.jpg)
-![](https://i.imgur.com/ypr2v1L.png)
+![](https://i.imgur.com/gzSdnTG.jpg)
+![](https://i.imgur.com/mGFmJ1g.png)
 
 # Building
 
