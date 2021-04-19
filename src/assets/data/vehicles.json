@@ -2,7 +2,7 @@
   {
     "name": "ATV",
     "icon": "assets/icons/vehicles/atv.png",
-    "category": "Misc",
+    "category": "ATV",
     "locations":
     [
       [3684.0366, 5999.0117],
@@ -21,7 +21,7 @@
   {
     "name": "Motorcycle",
     "icon": "assets/icons/vehicles/motorcycle.png",
-    "category": "Misc",
+    "category": "Motorcycle",
     "locations":
     [
       [13163.5, 7094.64],

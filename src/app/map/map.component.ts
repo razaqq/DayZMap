@@ -34,7 +34,9 @@ export class MapComponent implements OnDestroy
     noWrap: true,
     zIndex: 0,
     tileSize: this.config.get('tileSize'),
-    bounds: this.config.get('bounds')
+    bounds: this.config.get('bounds'),
+    updateWhenZooming: false,
+    updateWhenIdle: false
   };
   satLayer: TileLayer = tileLayer(this.config.get('satURL'), this.layerOptions);
   topoLayer: TileLayer = tileLayer(this.config.get('topoURL'), this.layerOptions);
