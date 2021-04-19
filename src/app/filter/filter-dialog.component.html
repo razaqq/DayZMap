@@ -1,9 +1,9 @@
 <h1 mat-dialog-title>Filters</h1>
 
 <mat-dialog-content class="filters">
-  <app-filter class="filterRow" name="Vehicles" [filters]="this.markersService.vehicleFilters"></app-filter>
-  <app-filter class="filterRow" name="Loot" [filters]="this.markersService.lootFilters"></app-filter>
-  <app-filter class="filterRow" name="Locations" [filters]="this.markersService.locationFilters"></app-filter>
+  <app-filter class="filterRow" name="Vehicles" [filters]="this.markersService.vehicleFilters" [iconClass]="'vehicleFilterIcon'"></app-filter>
+  <app-filter class="filterRow" name="Loot" [filters]="this.markersService.lootFilters" [iconClass]="'lootFilterIcon'"></app-filter>
+  <app-filter class="filterRow" name="Locations" [filters]="this.markersService.locationFilters" [iconClass]="'locationsFilterIcon'"></app-filter>
 </mat-dialog-content>
 
 <div mat-dialog-actions class="buttons">

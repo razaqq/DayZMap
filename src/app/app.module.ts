@@ -13,12 +13,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 import {AppConfig} from './app.config';
 
 
 @NgModule({
   imports: [BrowserModule, FormsModule, LeafletModule, MaterialModule, ReactiveFormsModule, MatDialogModule, MatCheckboxModule,
-    BrowserAnimationsModule, MatTooltipModule, HttpClientModule],
+    BrowserAnimationsModule, MatTooltipModule, HttpClientModule, ClipboardModule],
   declarations: [ AppComponent, MapComponent, FiltersDialogComponent, FilterComponent, ToolbarComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ AppConfig,

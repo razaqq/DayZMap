@@ -14,6 +14,7 @@ export class FilterComponent
   @Input() filters: Array<Filter> = [];
   @Input() name: string;
   @Input() icon: string;
+  @Input() iconClass: string;
   @Input() color: ThemePalette = 'primary';
 
   allVisible = false;

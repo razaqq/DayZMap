@@ -139,7 +139,7 @@
   },
   {
     "name": "Orlovets",
-    "locations": [[12131, 7189.79]],
+    "locations": [[12131, 7277]],
     "fontSize": 10,
     "category": "Towns"
   },
@@ -344,6 +344,90 @@
   {
     "name": "Skalka",
     "locations": [[2172, 12857]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Pobeda Dam",
+    "locations": [[9509.06, 13645]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Black Lake",
+    "locations": [[13350, 12058]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Novy Lug",
+    "locations": [[9405, 11237]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Bashnya",
+    "locations": [[4068.75, 11814.375]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Pass Sosnovy",
+    "locations": [[2973.28, 6751.9]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Vysota",
+    "locations": [[6595.31, 3404.1]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Lesnoy Khrebet",
+    "locations": [[8092.5, 7846.9]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Veresnik",
+    "locations": [[4403.4, 8093.4]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Factory",
+    "locations": [[11446.9, 7502.34]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Factory",
+    "locations": [[13063.125, 7115.625]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Krutoy Cap",
+    "locations": [[13474.7, 4086.6]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Old Fields",
+    "locations": [[6918.75, 8923.125]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "Gvozdno Military Base",
+    "locations": [[7746.5625, 12617.31]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
+    "name": "West Base",
+    "locations": [[3704.53, 10244]],
     "fontSize": 8,
     "category": "Landmarks"
   }

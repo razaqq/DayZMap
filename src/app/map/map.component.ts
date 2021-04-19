@@ -1,8 +1,10 @@
 import {Component, OnDestroy, Output, EventEmitter} from '@angular/core';
+import {Clipboard} from '@angular/cdk/clipboard';
 import {
   Map, Layer, MapOptions, TileLayer, CRS, tileLayer,
   TileLayerOptions, LeafletMouseEvent, LeafletEvent
 } from 'leaflet';
+
 import {armaCoordsToString, mapToArmaCoords} from './util';
 import {LeafletControlLayersConfig} from '@asymmetrik/ngx-leaflet/src/leaflet/layers/control/leaflet-control-layers-config.model';
 import {MapMarker} from '../markers/map-marker';
@@ -25,7 +27,8 @@ export class MapComponent implements OnDestroy
     zoom: this.config.get('initZoom'),
     minZoom: this.config.get('minZoom'),
     maxZoom: this.config.get('maxZoom'),
-    center: this.config.get('center')
+    center: this.config.get('center'),
+    preferCanvas: true
   };
   layerOptions: TileLayerOptions = {
     noWrap: true,
@@ -40,19 +43,19 @@ export class MapComponent implements OnDestroy
     baseLayers:
       {
         Satellite: this.satLayer,
-        Topology: this.topoLayer
+        Topography: this.topoLayer
       },
     overlays: {}
   };
   layersControlOptions: any = { position: 'topright' };
 
-  public coords = '000 | 000';
-  public map: Map;
-  public zoom: number;
-  public mapSize: number;
-  public maxBounds: number;
+  coords = '000 | 000';
+  map: Map;
+  zoom: number;
+  mapSize: number;
+  maxBounds: number;
 
-  constructor(private markersService: MarkersService, private config: AppConfig)
+  constructor(private markersService: MarkersService, private config: AppConfig, private clipboard: Clipboard)
   {
     this.markersService.disableFilterSource$.subscribe(markers => this.changeMarkerVisibility(markers, false));
     this.markersService.enableFilterSource$.subscribe(markers => this.changeMarkerVisibility(markers, true));
@@ -94,7 +97,10 @@ export class MapComponent implements OnDestroy
   {
     if (e.originalEvent.button === 2)
     {
-      console.log(mapToArmaCoords(e.latlng.lat, e.latlng.lng, this.mapSize, this.maxBounds));
+      const coords = mapToArmaCoords(e.latlng.lat, e.latlng.lng, this.mapSize, this.maxBounds);
+      const coordsString = `[${coords[0]}, ${coords[1]}]`;
+      this.clipboard.copy(coordsString);
+      console.log(coordsString);
     }
   }
 

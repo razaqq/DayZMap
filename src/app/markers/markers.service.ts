@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {initLocationMarker, initVehicleMarker, MapMarker} from './map-marker';
+import {initLocationMarker, initLootMarker, initVehicleMarker, MapMarker} from './map-marker';
 import {Subject} from 'rxjs';
 import {Filter, buildFilters} from './filter';
 import {AppConfig} from '../app.config';
@@ -12,6 +12,7 @@ import {AppConfig} from '../app.config';
 export class MarkersService {
   vehiclesURL = './assets/data/vehicles.json';
   locationsURL = './assets/data/locations.json';
+  lootURL = './assets/data/loot.json';
 
   vehicleFilters: Filter[];
   lootFilters: Filter[];
@@ -34,7 +35,11 @@ export class MarkersService {
       this.enableFilterSource$.next(locations);
     }, error => { console.error('Failed to get location markers: ', error); });
 
-    this.lootFilters = buildFilters([]);
+    this.http.get<MapMarker[]>(this.lootURL).subscribe(loot => {
+      loot.forEach(l => initLootMarker(l, this.config.get('mapSize'), this.config.get('maxBounds')));
+      this.lootFilters = buildFilters(loot);
+      this.enableFilterSource$.next(loot);
+    }, error => { console.error('Failed to get loot markers: ', error); });
   }
 
   setFilterVisibility(filter: Filter, visible: boolean): void

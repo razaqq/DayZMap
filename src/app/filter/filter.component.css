@@ -8,11 +8,19 @@
   margin: 0 12px;
 }
 
-.filterIcon
+.vehicleFilterIcon
 {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border-color: rgba(38, 38, 38, 1);
+}
+
+.lootFilterIcon
+{
+  height: 14px;
+  width: 14px;
   border-radius: 5px;
   border-color: rgba(38, 38, 38, 1);
 }

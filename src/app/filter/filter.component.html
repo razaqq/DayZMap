@@ -15,7 +15,7 @@
                       [color]="filter.color"
                       (ngModelChange)="updateAllComplete()"
                       (change)="onChange(filter, $event.checked)">
-          <img *ngIf="filter.icon" src="{{ filter.icon }}" class="filterIcon" alt="">
+          <img *ngIf="filter.icon" src="{{ filter.icon }}" class="{{ this.iconClass }}" alt="">
           {{ filter.name }}
         </mat-checkbox>
       </li>
