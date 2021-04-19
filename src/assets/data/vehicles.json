@@ -1,7 +1,7 @@
 [
   {
     "name": "ATV",
-    "icon": "assets/icons/atv.png",
+    "icon": "assets/icons/vehicles/atv.png",
     "category": "Misc",
     "locations":
     [
@@ -20,7 +20,7 @@
   },
   {
     "name": "Motorcycle",
-    "icon": "assets/icons/motorcycle.png",
+    "icon": "assets/icons/vehicles/motorcycle.png",
     "category": "Misc",
     "locations":
     [
@@ -47,7 +47,7 @@
   },
   {
     "name": "UH-1H",
-    "icon": "assets/icons/helicopter.png",
+    "icon": "assets/icons/vehicles/helicopter.png",
     "category": "Helicopter",
     "locations":
     [
@@ -57,7 +57,7 @@
   },
   {
     "name": "UH-1H <br> Little Bird",
-    "icon": "assets/icons/helicopter.png",
+    "icon": "assets/icons/vehicles/helicopter.png",
     "category": "Helicopter",
     "locations":
     [
@@ -79,7 +79,7 @@
   },
   {
     "name": "Little Bird",
-    "icon": "assets/icons/helicopter.png",
+    "icon": "assets/icons/vehicles/helicopter.png",
     "category": "Helicopter",
     "locations":
     [
@@ -93,7 +93,7 @@
   },
   {
     "name": "AN-2",
-    "icon": "assets/icons/plane.png",
+    "icon": "assets/icons/vehicles/plane.png",
     "category": "Plane",
     "locations":
     [
@@ -105,7 +105,7 @@
   },
   {
     "name": "Bike",
-    "icon": "assets/icons/bike.png",
+    "icon": "assets/icons/vehicles/bike.png",
     "category": "Bike",
     "locations":
     [
@@ -127,7 +127,7 @@
   },
   {
     "name": "Military car (Landrover, HMMWV, Camo UAZs, Armed pickups)",
-    "icon": "assets/icons/military_car.png",
+    "icon": "assets/icons/vehicles/military_car.png",
     "category": "Military Car",
     "locations":
     [
@@ -151,7 +151,7 @@
   },
   {
     "name": "Civilian car (including SUV)",
-    "icon": "assets/icons/civilian_car.png",
+    "icon": "assets/icons/vehicles/civilian_car.png",
     "category": "Civilian Car",
     "locations":
     [
@@ -199,7 +199,7 @@
   },
   {
     "name": "Bus",
-    "icon": "assets/icons/bus.png",
+    "icon": "assets/icons/vehicles/bus.png",
     "category": "Bus",
     "locations":
     [
@@ -216,7 +216,7 @@
   },
   {
     "name": "Tractor",
-    "icon": "assets/icons/tractor.png",
+    "icon": "assets/icons/vehicles/tractor.png",
     "category": "Tractor",
     "locations":
     [
@@ -234,7 +234,7 @@
   },
   {
     "name": "Truck (Ural, V3S)",
-    "icon": "assets/icons/truck.png",
+    "icon": "assets/icons/vehicles/truck.png",
     "category": "Truck",
     "locations":
     [
@@ -250,7 +250,7 @@
   },
   {
     "name": "Boat",
-    "icon": "assets/icons/boat.png",
+    "icon": "assets/icons/vehicles/boat.png",
     "category": "Boat",
     "locations":
     [
