@@ -22,11 +22,3 @@ p
   left: 0;
   z-index: 5;
 }
-
-.github
-{
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  z-index: 10;
-}

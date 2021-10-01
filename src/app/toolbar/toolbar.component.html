@@ -1,16 +1,18 @@
 <mat-sidenav-container>
   <mat-toolbar class="toolbar-container" color="primary">
-    <button mat-button aria-label="Filter"
-            matTooltip="Change Filters" matTooltipPosition="below"
-            (click)="openFiltersDialog()">
+    <button mat-button aria-label="Filter" (click)="openFiltersDialog()">
       Filters
       <mat-icon>filter_list</mat-icon>
     </button>
 
     <span class="spacer"></span>
 
-    <button mat-button aria-label="Login"
-            matTooltip="Login" matTooltipPosition="below">
+    <a mat-button aria-label="Github" href="https://github.com/razaqq/DayZMap/" target="_blank">
+      GitHub
+      <img src="assets/icons/github.svg" alt="">
+    </a>
+
+    <button mat-button aria-label="Login" (click)="openLoginsDialog()">
       Login
       <mat-icon>login</mat-icon>
     </button>

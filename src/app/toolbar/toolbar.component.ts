@@ -14,15 +14,13 @@ export class ToolbarComponent
 
   openFiltersDialog(): void
   {
-    const dialogRef = this.dialog.open(FiltersDialogComponent, {
+    this.dialog.open(FiltersDialogComponent, {
       width: '75%',
       data: {}
     });
+  }
 
-    /*
-    dialogRef.afterClosed().subscribe(result =>
-    {
-    });
-    */
+  openLoginsDialog(): void
+  {
   }
 }
