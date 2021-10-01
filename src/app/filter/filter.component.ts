@@ -39,6 +39,6 @@ export class FilterComponent
 
   onChange(filter: Filter, checked: boolean): void
   {
-      this.markersService.setFilterVisibility(filter, checked);
+    this.markersService.setFilterVisibility(filter, checked);
   }
 }

@@ -1,9 +1,14 @@
 import {Component, OnDestroy, Output, EventEmitter} from '@angular/core';
 import {Clipboard} from '@angular/cdk/clipboard';
+
+// import './map-measure';
+import {measureControl} from './map-measure';
+
 import {
   Map, Layer, MapOptions, TileLayer, CRS, tileLayer,
-  TileLayerOptions, LeafletMouseEvent, LeafletEvent
+  TileLayerOptions, LeafletMouseEvent, LeafletEvent, Control, FeatureGroup, featureGroup, DrawEvents, Polygon, LatLng
 } from 'leaflet';
+import 'leaflet-draw';
 
 import {armaCoordsToString, mapToArmaCoords} from './util';
 import {LeafletControlLayersConfig} from '@asymmetrik/ngx-leaflet/src/leaflet/layers/control/leaflet-control-layers-config.model';
@@ -28,7 +33,8 @@ export class MapComponent implements OnDestroy
     minZoom: this.config.get('minZoom'),
     maxZoom: this.config.get('maxZoom'),
     center: this.config.get('center'),
-    preferCanvas: true
+    preferCanvas: true,
+    attributionControl: false
   };
   layerOptions: TileLayerOptions = {
     noWrap: true,
@@ -50,6 +56,21 @@ export class MapComponent implements OnDestroy
     overlays: {}
   };
   layersControlOptions: any = { position: 'topright' };
+  measure: Control = measureControl({ position: 'bottomright' });
+
+  drawnItems: FeatureGroup = featureGroup();
+  drawOptions = {
+    draw: {
+      marker: false,
+      circle: false,
+      rectangle: false,
+      circlemarker: false
+    },
+    edit: {
+      featureGroup: this.drawnItems,
+      edit: true
+    }
+  };
 
   coords = '000 | 000';
   map: Map;
@@ -61,6 +82,8 @@ export class MapComponent implements OnDestroy
   {
     this.markersService.disableFilterSource$.subscribe(markers => this.changeMarkerVisibility(markers, false));
     this.markersService.enableFilterSource$.subscribe(markers => this.changeMarkerVisibility(markers, true));
+    this.markersService.enableFilterPolySource$.subscribe(polygons => this.changePolygonVisibility(polygons, true));
+    this.markersService.disableFilterPolySource$.subscribe(polygons => this.changePolygonVisibility(polygons, false));
 
     // lets copy these so we dont have to call lookup all the time
     this.maxBounds = this.config.get('maxBounds');
@@ -82,6 +105,8 @@ export class MapComponent implements OnDestroy
 
     this.zoom = map.getZoom();
     this.zoom$.emit(this.zoom);
+
+    this.measure.addTo(this.map);
   }
 
   onMapZoomEnd(e: LeafletEvent): void
@@ -125,6 +150,47 @@ export class MapComponent implements OnDestroy
         {
           this.map.addLayer(m);
         }
+      }
+    }
+  }
+
+  changePolygonVisibility(polygons: Polygon[], visible: boolean): void
+  {
+    for (const polygon of polygons)
+    {
+      if (this.map.hasLayer(polygon) && !visible)
+      {
+        this.map.removeLayer(polygon);
+      }
+      else if (!this.map.hasLayer(polygon) && visible)
+      {
+        this.map.addLayer(polygon);
+      }
+    }
+  }
+
+  onDrawCreated(e: DrawEvents.Created): void
+  {
+    this.drawnItems.addLayer(e.layer);
+
+    switch (e.layerType)
+    {
+      case 'polygon':
+      {
+        const poly = e.layer as Polygon;
+        const rawCoords: Array<[number, number]> = [];
+        const latLngs = poly.getLatLngs()[0] as Array<LatLng>;
+        latLngs.forEach(p => rawCoords.push(mapToArmaCoords(p.lat, p.lng, this.mapSize, this.maxBounds)));
+        const coords: Array<[number, number]> = [];
+        rawCoords.forEach(c => {
+          coords.push([
+            Math.round((c[0] + Number.EPSILON) * 100) / 100,
+            Math.round((c[1] + Number.EPSILON) * 100) / 100
+          ]);
+        });
+        const out: string = JSON.stringify(coords, null, 2);
+        this.clipboard.copy(out);
+        console.log(out);
       }
     }
   }

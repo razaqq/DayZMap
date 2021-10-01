@@ -2,6 +2,7 @@ import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {LeafletDrawModule} from '@asymmetrik/ngx-leaflet-draw';
 import {MapComponent} from './map/map.component';
 import {AppComponent} from './app.component';
 import {FiltersDialogComponent} from './filter/filter-dialog.component';
@@ -18,8 +19,8 @@ import {AppConfig} from './app.config';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, LeafletModule, MaterialModule, ReactiveFormsModule, MatDialogModule, MatCheckboxModule,
-    BrowserAnimationsModule, MatTooltipModule, HttpClientModule, ClipboardModule],
+  imports: [BrowserModule, FormsModule, LeafletModule, LeafletDrawModule, MaterialModule, ReactiveFormsModule, MatDialogModule,
+    MatCheckboxModule, BrowserAnimationsModule, MatTooltipModule, HttpClientModule, ClipboardModule],
   declarations: [ AppComponent, MapComponent, FiltersDialogComponent, FilterComponent, ToolbarComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ AppConfig,

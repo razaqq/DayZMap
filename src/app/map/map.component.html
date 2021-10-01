@@ -1,4 +1,4 @@
-<div class="map-container" leaflet
+<div class="map-container" leaflet leafletDraw
      [leafletOptions]="options"
      [leafletLayers]="layers"
      [leafletLayersControl]="layersControl"
@@ -7,7 +7,11 @@
      (leafletMapZoomEnd)="onMapZoomEnd($event)"
      (leafletMouseMove)="onMouseMove($event)"
      (leafletMouseDown)="onMouseDown($event)"
-     (contextmenu)="onRightClick($event)">
+     (contextmenu)="onRightClick($event)"
+     [leafletDrawOptions]="drawOptions"
+     (leafletDrawCreated)="onDrawCreated($event)">
+
+  <div [leafletLayer]="drawnItems"></div>
 </div>
 
 <div class="coords hidden-sm hidden-xs">{{ coords }}</div>

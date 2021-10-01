@@ -1,5 +1,6 @@
 import {ThemePalette} from '@angular/material/core';
 import {MapMarker} from './map-marker';
+import {Polygon} from 'leaflet';
 
 export interface Filter
 {
@@ -7,7 +8,8 @@ export interface Filter
   icon?: string;
   visible: boolean;
   color: ThemePalette;
-  markers: Array<MapMarker>;
+  markers?: MapMarker[];
+  polygons?: Polygon[];
 }
 
 export function buildFilters(markers: Array<MapMarker>): Array<Filter>
