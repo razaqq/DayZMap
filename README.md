@@ -30,13 +30,16 @@ ng build --aot --prod --base-href=/dayz/ --deploy-url=http://www.example.com/
    2.2. Run it, this should give you a single `map.png` with about 500 MB as output.
 
 ##### Getting Topography Map
-You can skip some these steps marked as (optional) by grabbing the pre-rendered map at `tools\Chernarus.png`
+You can skip some these steps marked as (optional) by grabbing the pre-rendered map at `tools\Chernarus.png`. (Its only 15360x15360, you might need a better resolution for higher zoom levels)
 1. (Optional) Export `Chernarus.emf` from Arma 2
    1.1. Start game as admin
    1.2. Press `left shift + numpad minus`, then release and type `topographz` (it uses QUERTZ layout, not QUERY)
    1.3. You should find `C:\chernarus.emf`
    1.4. Since Arma 3 there is also `ExportNoGrid`, you will have to play around with that
 2. (Optional) Convert `.emf` to `.png` as [described here](https://community.bistudio.com/wiki/Making_Satellite_Texture_and_Mask).
+```console
+EmfToPng.exe Chernarus.emf 8
+```
 
 ##### Getting Tiles From Single Image
 1. Run
@@ -64,4 +67,5 @@ You can skip some these steps marked as (optional) by grabbing the pre-rendered 
 - [How to export Topography](http://killzonekid.com/arma-scripting-tutorials-how-to-export-topography/)
 - [Mondkalb's Terrain Tutorial](https://community.bistudio.com/wiki/Mondkalb%27s_Terrain_Tutorial)
 - [Making Satellite Texture and Mask](https://community.bistudio.com/wiki/Making_Satellite_Texture_and_Mask)
+- [ArmA 2 Terrain](https://pmc.editing.wiki/doku.php?id=arma2:terrain)
 - [gdal2tiles.py](https://github.com/commenthol/gdal2tiles-leaflet)
