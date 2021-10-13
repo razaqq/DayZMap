@@ -384,6 +384,12 @@
     "category": "Landmarks"
   },
   {
+    "name": "Kumyrna",
+    "locations": [[8367.66, 5981.25]],
+    "fontSize": 8,
+    "category": "Landmarks"
+  },
+  {
     "name": "Lesnoy Khrebet",
     "locations": [[8092.5, 7846.9]],
     "fontSize": 8,
