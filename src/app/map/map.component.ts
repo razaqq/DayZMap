@@ -1,13 +1,11 @@
 import {Component, OnDestroy, Output, EventEmitter} from '@angular/core';
 import {Clipboard} from '@angular/cdk/clipboard';
 
-// import './map-measure';
-import {measureControl} from './map-measure';
-
 import {
   Map, Layer, MapOptions, TileLayer, CRS, tileLayer,
-  TileLayerOptions, LeafletMouseEvent, LeafletEvent, Control, FeatureGroup, featureGroup, DrawEvents, Polygon, LatLng
+  TileLayerOptions, LeafletMouseEvent, LeafletEvent, Control, FeatureGroup, featureGroup, DrawEvents, Polygon, LatLng, PolylineOptions
 } from 'leaflet';
+import L from 'leaflet';
 import 'leaflet-draw';
 
 import {armaCoordsToString, mapToArmaCoords} from './util';
@@ -15,7 +13,6 @@ import {LeafletControlLayersConfig} from '@asymmetrik/ngx-leaflet/src/leaflet/la
 import {MapMarker} from '../markers/map-marker';
 import {MarkersService} from '../markers/markers.service';
 import {AppConfig} from '../app.config';
-
 
 @Component({
   selector: 'app-map',
@@ -56,19 +53,21 @@ export class MapComponent implements OnDestroy
     overlays: {}
   };
   layersControlOptions: any = { position: 'topright' };
-  measure: Control = measureControl({ position: 'bottomright' });
 
   drawnItems: FeatureGroup = featureGroup();
-  drawOptions = {
+  polylineOptions: L.DrawOptions.PolylineOptions = {
+    factor: 1
+  };
+  drawOptions: Control.DrawConstructorOptions = {
     draw: {
       marker: false,
       circle: false,
       rectangle: false,
-      circlemarker: false
+      circlemarker: false,
+      polyline: this.polylineOptions,
     },
     edit: {
       featureGroup: this.drawnItems,
-      edit: true
     }
   };
 
@@ -88,6 +87,7 @@ export class MapComponent implements OnDestroy
     // lets copy these so we dont have to call lookup all the time
     this.maxBounds = this.config.get('maxBounds');
     this.mapSize = this.config.get('mapSize');
+    this.polylineOptions.factor = this.mapSize / this.maxBounds;
   }
 
   ngOnDestroy(): void
@@ -106,7 +106,7 @@ export class MapComponent implements OnDestroy
     this.zoom = map.getZoom();
     this.zoom$.emit(this.zoom);
 
-    this.measure.addTo(this.map);
+    // this.measure.addTo(this.map);
   }
 
   onMapZoomEnd(e: LeafletEvent): void
@@ -175,6 +175,11 @@ export class MapComponent implements OnDestroy
 
     switch (e.layerType)
     {
+      case 'polyline':
+      {
+        console.log('polyline');
+        break;
+      }
       case 'polygon':
       {
         const poly = e.layer as Polygon;
